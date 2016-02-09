@@ -4,13 +4,18 @@ int state = stateMenu;
 
 ArrayList<Target> targets_array;
 
+Player gun;
+Timer t;
+
 void setup(){
 size(1000,600);  
 background(0);
+
 targets_array= new ArrayList<Target>();
+
+gun = new Player();
+t = new Timer();
 }//End Setup
-
-
 
 void draw(){//Start Draw
 
@@ -30,8 +35,6 @@ void draw(){//Start Draw
 }//draw ends
 
 void reset(){
+  t.time="000";
   targets_array.clear();
-  
-  
-  
 }

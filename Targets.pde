@@ -1,5 +1,5 @@
 class Target{
-
+  float diam;
   float xT;// X coordinate ellipses
   float yT;// Y coordinate of ellipses
   int rand;
@@ -8,13 +8,15 @@ class Target{
   int r2=40;//Middle ring size
   int r3=20;//Inner ring size
 
-  Target(){
+  Target(float rad){
+  diam = rad;
   randomspawn();
   xT=z;
   yT=335;
   }
 
   void display(){
+  smooth();
   stroke(0);
   fill(204,0,0);
   ellipse(xT,yT,r1,r1);
@@ -25,6 +27,7 @@ class Target{
   ellipse(xT,yT,r3,r3);
   }
   
+  //Controls location of spawning for targets
   void randomspawn(){
   int rand = int(random(1,14));
   if(rand==1)

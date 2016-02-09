@@ -1,14 +1,18 @@
 class Target{
-  boolean hit=false;
+  boolean hit;
   float x, y;
   float xT,yT;// X and y coordinate ellipses
   int rand;
-  int z=0;
-  int a;
+  //int z=0;
+  //Large Target size variables
   int r1=60;//Outer ring size
   int r2=40;//Middle ring size
   int r3=20;//Inner ring size
-  int score;
+  //Smaller Target size variables
+  int r4=45;
+  int r5=30;
+  int r6=15;
+  
 
   Target(float _x, float _y){
   x=_x;
@@ -16,7 +20,7 @@ class Target{
   }
 
   void display(){
-    if(!hit){
+    if (!hit) {
       smooth();
       stroke(0);
       fill(204,0,0);
@@ -28,14 +32,15 @@ class Target{
       ellipse(x,y,r3,r3);
     }
   }
+  
   //Detects where a target has been hit and grants points to score depending on accuracy
   void checkHit(boolean _p,float _x, float _y){
     float distance = dist(_x ,_y,x,y);
     if(_p && distance<30) {
       hit=true;
-      if(distance<10) score=10;
-      if(distance<20 && distance>=10) score=8;
-      if(distance<30 && distance>=20) score=6;
+      if(distance<10) scores+=10;
+      if(distance<20 && distance>=10) scores+=8;
+      if(distance<30 && distance>=20) scores+=6;
     }
   }
 }

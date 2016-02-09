@@ -2,15 +2,15 @@ final int stateMenu = 0;
 final int stateGame = 1;
 int state = stateMenu;
 
-boolean shooting;
+boolean shooting,hit;
 float bullets;
+int score=0;
+int scores=0;
+int z;
 
-public int z=0;
-public int score=0;
 
-
-//ArrayList<Target> targets_array;
-Target[] targets = new Target[3];
+//initializes target array
+Target[] targets = new Target[5];
 
 Player gun;
 Timer t;
@@ -19,7 +19,11 @@ void setup(){
   size(1000,600);  
   background(0);
   
+  score=0;
+  scores=0;
+  z=0;
   bullets=10;
+  
   
   //targets_array= new ArrayList<Target>();
   
@@ -37,14 +41,11 @@ void draw(){//Start Draw
     case stateGame:
       drawForStateGame();
       break;
-      
-      default:
-      break;
+     
   
   }//switch ends
 }//draw ends
 
 void reset(){
   t.time="000";
-  //targets_array.clear();
 }

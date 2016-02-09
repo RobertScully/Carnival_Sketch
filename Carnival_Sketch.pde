@@ -1,41 +1,68 @@
 void setup(){
-background();
+background(204,0,0);//Set background colour to red
+background();//Calls background drawing function
 size(1000,600);
 }
 
 //Background function to be called in main draw
 void background(){
-  
   noStroke();
   rectMode(CENTER);
 
   fill(color(215, 138, 6));//Lighter brown to show light on 
   rect(500, 550, 1000, 150);//1st Rect
   fill(color(135, 89, 8));//Changes colour to darker to denote light for 3d effect
-  triangle(0, 475, 50, 475, 50, 375);//Left 2nd triangle
-  rect(500, 425, 900, 100);//2nd rect
-  triangle(1000, 475, 950, 475, 950, 375);//right 2nd triangle
+  triangle(0, 475, 75, 475, 75, 375);//Left 2nd triangle
+  rect(500, 425, 850, 100);//2nd rect
+  triangle(1000, 475, 925, 475, 925, 375);//right 2nd triangle
   
   fill(color(215, 138, 6));
-  rect(500, 335, 900, 80);//3rd rect
+  rect(500, 335, 850, 80);//3rd rect
   fill(color(135, 89, 8));
-  triangle(50, 295, 130, 295, 125, 235);//left 4th tri
+  triangle(75, 295, 130, 295, 125, 235);//left 4th tri
   rect(500, 265, 750, 60);//4th rect
-  triangle(950, 295, 875, 295, 875, 235);//right 4th tri
-  
+  triangle(925, 295, 875, 295, 875, 235);//right 4th tri
   
   fill(color(215, 138, 6));
   rect(500, 205, 750, 60);//5th rect
   fill(color(135, 89, 8));
-  triangle(125, 175, 200, 175, 200, 125);//left 6th tri
-  rect(500, 150, 600, 50);//6th
-  triangle(875, 175, 800 , 175, 800, 125);//right 6th tri
+  triangle(125, 175, 175, 175, 175, 125);//left 6th tri
+  rect(500, 150, 650, 50);//6th
+  triangle(875, 175, 825, 175, 825, 125);//right 6th tri
   
   fill(color(215, 138, 6));
-  rect(500, 50, 600, 150);//7th rect
+  rect(500, 50, 650, 150);//7th rect
   
-  fill(255);
+  
+  fill(0);//Fill boxes in black
+  stroke(255);
+  rect(100,535,190,110);//Draw Left score box
+  rect(900,535,190,110);//Draw Right score box
+  
+ 
   stroke(0);
-  rect(100,535,190,110);
-  rect(900,535,190,110);
+  line(75,375,925,375);//Line between 2nd and 3rd rect
+  line(125,235,875,235);//Line between 4th and 5th rect
+ 
+  strokeWeight(2);
+  line(20,0,20,448);
+  line(60,0,60,394);
+  line(100,0,100,264);
+  line(140,0,140,159);
+  line(176,0,176,124);
+  //Left curtain lines
+  
+  line(980,0,980,448);
+  line(940,0,940,394);
+  line(900,0,900,264);
+  line(860,0,860,159);
+  line(823,0,823,124);
+  //Right curtain lines
+  
+  line(0,475,1000,475);
+  line(75,295,925,295);
+  line(125,175,875,175);
+  //line(150,
+  
+  
 }

@@ -6,10 +6,11 @@ boolean shooting;
 float bullets;
 
 public int z=0;
+public int score=0;
 
 
 //ArrayList<Target> targets_array;
-Target[] targets = new Target[15];
+Target[] targets = new Target[3];
 
 Player gun;
 Timer t;

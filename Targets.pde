@@ -1,6 +1,5 @@
 class Target{
-  boolean hit;
-  float diam;
+  boolean hit=false;
   float x, y;
   float xT,yT;// X and y coordinate ellipses
   int rand;

@@ -22,7 +22,7 @@
     fill(22,22,222);//Sets Timer colour to Blue
     if(gun.lives>=1){
     textAlign(CENTER);
-    text(time, 300 , 550 );//Displays timer at the center of the sketch
+    text(time, 300 , 550 );//Displays timer
     }
     if(gun.lives==0){
       textAlign(CENTER);

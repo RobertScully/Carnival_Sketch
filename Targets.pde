@@ -32,18 +32,21 @@ class Target{
       ellipse(x,y,r3,r3);
     }
   }
-  
-  //Detects where a target has been hit and grants points to score depending on accuracy
   void checkHit(boolean _p,float _x, float _y){
     float distance = dist(_x ,_y,x,y);
     if(_p && distance<30) {
       hit=true;
-      if(distance<10) scores+=10;
-      if(distance<20 && distance>=10) scores+=8;
-      if(distance<30 && distance>=20) scores+=6;
+      if(distance<10) score+=10;
+      if(distance<20 && distance>=10) score+=8;
+      if(distance<30 && distance>=20) score+=6;
     }
   }
+  
 }
+
+
+//Detects where a target has been hit and grants points to score depending on accuracy
+  
 
 void randomspawn(){
   int rand = int(random(1,14));

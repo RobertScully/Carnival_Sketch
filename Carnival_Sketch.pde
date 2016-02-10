@@ -10,7 +10,7 @@ int z;
 
 
 //initializes target array
-Target[] targets = new Target[5];
+ArrayList<Target> targets = new ArrayList<Target>();
 
 Player gun;
 Timer t;
@@ -25,7 +25,6 @@ void setup(){
   bullets=10;
   
   
-  //targets_array= new ArrayList<Target>();
   
   gun = new Player();
   t = new Timer();
@@ -48,4 +47,7 @@ void draw(){//Start Draw
 
 void reset(){
   t.time="000";
+  score=0;
+  bullets=10;
+  targets.clear();
 }

@@ -3,9 +3,9 @@ background(204,0,0);
 background();  
 
     if(millis() - t.start_time >= t.interval){
-      for (int i=0 ; i < targets.length ; i++) {
+      for (int i=0 ; i < 1 ; i++) {
         randomspawn();
-        targets[i] = new Target(z , 335);
+         targets.add(new Target(z , 335));
         }
       }
 
@@ -27,14 +27,12 @@ if(bullets>=1 && mousePressed && mouseButton == LEFT) {
    shooting=false;
  }
  
- //float score=0;
  //Draws targets and check if they have been hit. If hit adds to score  
- for(int i = 0 ; i < targets.length ; i++) {
-   if(!targets[i].hit){
-     targets[i].checkHit(shooting, mouseX, mouseY);
-     targets[i].display();
+ for(int i = 0 ; i < targets.size() ; i++) {
+   if(!targets.get(i).hit){
+     targets.get(i).checkHit(shooting, mouseX, mouseY);
+     targets.get(i).display();
    }
-   score += targets[i].scores;
  }
  
    //Displays crosshair in place of a cursor. If mouse button is pressed turns crosshair red.

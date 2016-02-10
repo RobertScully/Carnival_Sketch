@@ -2,9 +2,23 @@ void drawForStateGame(){
 background(204,0,0);
 background();  
 
-if(frameCount==600){
-    reset();
+if(frameCount==600){//Once 10 seconds has passed ends the game
+    if(score > topscore1 && score >topscore2){//If score is higher than the top score replaces topscore with score
+      topscore1=score;
+    }
+    else if(score>topscore2 && score<topscore1){// if score is lower than first score but greater than third score sets second score to current score
+      topscore2=score;
+    }
+    else if(score>topscore3 && score<topscore2){// if score is lower than second score but greater than third scores sets second score to current score
+      topscore3=score;
+    }
+    else {
+    score=lastscore;
+    }
+    
     state=stateMenu;
+    reset();
+    
 }
 
 

@@ -6,6 +6,8 @@ boolean shooting=false;
 boolean hit=false;
 int bullets;
 int score=0;
+int topscore1,topscore2,topscore3=0;
+int lastscore=0;
 int q,z;
 
 

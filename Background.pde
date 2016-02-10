@@ -38,19 +38,20 @@ void background(){
   fill(0);
   stroke(255);
   rect(900,535,190,110);//Draw Right score box
-  fill(200);
+  
+    fill(200);
   textSize(15);
   text("Highscores", 900,500);
   fill(200);
   textSize(15);
-  text("1:"+topscore1, 830,515);
+  textAlign(LEFT);
+  text("1:"+topscores[0], 820,515);
   fill(200);
   textSize(15);
-  text("2:"+topscore2, 830,530);
+  text("2:"+topscores[1], 820,530);
   fill(200);
   textSize(15);
-  text("3:"+topscore3, 830,545);
-  
+  text("3:"+topscores[2], 820,545);
   
   stroke(0);
   strokeWeight(1);

@@ -7,18 +7,28 @@ if(frameCount>600){//Once 10 seconds has passed ends the game
      topscore3 = topscore2;
      topscore2 = topscore1;
      topscore1 = score;
-   }
-
+     topscores[0]=str(topscore1);
+     topscores[1]=str(topscore2);
+     topscores[2]=str(topscore3);
+  }
   else if (score > topscore2){
     topscore3 = topscore2;
     topscore2 = score;
+    topscores[1]=str(topscore2);
+    topscores[2]=str(topscore3);
   }
-
   else if (score > topscore3){
     topscore3 = score;
+    topscores[2]=str(topscore3);
   }  
-    lastscore=score;
+   lastscore=score;
  
+  
+  println (topscores[0]);
+  println (topscores[1]);
+  println (topscores[2]);
+  
+  saveStrings("Highscores.txt", topscores);
  
     state=stateMenu;
     reset();  

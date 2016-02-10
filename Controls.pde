@@ -6,6 +6,10 @@ void keyPressed(){
       {
         state=stateGame;
       }
+      /*else if(key=='2')
+      {
+        state=stateLongGame;
+      }*/
   }//close switch
   if(key=='r'||key=='R')
   {

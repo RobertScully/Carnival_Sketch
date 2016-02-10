@@ -4,6 +4,7 @@ int state = stateMenu;
 
 boolean shooting=false;
 boolean hit=false;
+//boolean sc1,sc2,sc3,sc4,sc5,sc6,sc7,sc8,sc9,sc10,sc11,sc12,sc13=false;
 int bullets;
 int score=0;
 

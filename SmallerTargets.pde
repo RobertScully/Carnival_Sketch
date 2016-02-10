@@ -31,7 +31,7 @@ class smallerTarget{
   //Detects where a target has been hit and grants points to score depending on accuracy
   void smallcheckHit(boolean _ps,float _xs, float _ys){
     float distance = dist(_xs ,_ys,xs,ys);
-    if(_ps && distance<30) {
+    if(_ps && distance<22.5) {
       hit=true;
       if(distance<10) score+=20;
       if(distance<20 && distance>=10) score+=15;

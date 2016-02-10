@@ -11,27 +11,25 @@ background();
          stargets.add(new smallerTarget(q,205));
         }
       }
-
-
-  
- 
- //Draws targets and check if they have been hit. If hit adds to score  
+      
+ //Draws targets and check if they have been hit. If hit adds to score
  for(int i = 0 ; i < targets.size() ; i++) {
    if(!targets.get(i).hit){
      targets.get(i).checkHit(shooting, mouseX, mouseY);
      targets.get(i).display();
    }
  }
- 
- for(int i = 0 ; i < stargets.size() ; i++) {
-   if(!stargets.get(i).hit){
-     stargets.get(i).smallcheckHit(shooting, mouseX, mouseY);
-     stargets.get(i).smalldisplay();
+   //Draws smaller targets and check if they have been hit. If hit adds to score
+   for(int i = 0 ; i < stargets.size() ; i++) {
+     if(!stargets.get(i).hit){
+       stargets.get(i).smallcheckHit(shooting, mouseX, mouseY);
+       stargets.get(i).smalldisplay();
+     }
    }
- }
  
  
    //Displays crosshair in place of a cursor. If mouse button is pressed turns crosshair red.
+   noCursor();
    noFill();
    if(shooting){
      stroke(255,0,0);
@@ -44,13 +42,15 @@ background();
    line(mouseX,mouseY-15, mouseX, mouseY+15);
    
    //Displays number of bullets remaining
+   fill(0);
+   text("Ammo", 770,500);
    stroke(0);
    fill(100);
    for(int i=0;i<int(bullets);i++){
-     rect(770,585-i*10,10,5);
+     rect(775,595-i*10,10,5);
    }
-   
-   text("Your score is: " +score, 90,510);//Displays Score of current Game
+   textSize(15);
+   text("Your score is: " +score, 70,500);//Displays Score of current Game
    
   
    

@@ -13,5 +13,6 @@ void drawForStateMenu() {
   text("Controls",width/2,500);
   textSize(15);
   text("Left Click on a target to shoot it",width/2,520);
-  text("Right Click to reload your gun",width/2,540);
+  text("Right Click or Press R to reload your gun",width/2,540);
+  bullets=10;//Sets bullets to 10 to ensure player spawns with full ammo
 }

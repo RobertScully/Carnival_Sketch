@@ -9,9 +9,7 @@ class Target{
   int r2=40;//Middle ring size
   int r3=20;//Inner ring size
   //Smaller Target size variables
-  int r4=45;
-  int r5=30;
-  int r6=15;
+  
   
 
   Target(float _x, float _y){
@@ -46,14 +44,20 @@ class Target{
   
 }
 
-
-
 void randomspawn(){
-  int rand = int(random(1,14));
+  int rand = int(random(1,14)); 
+  //int a = rand;
   if(rand==1)
   {
-    z=110;  
-  }
+    //if(sc1==false){
+    z=110; 
+    //sc1=true;
+    //}
+    //else{
+    //randomspawn(); 
+    }
+  //}
+  
   else if(rand==2)
   {
     z=175;

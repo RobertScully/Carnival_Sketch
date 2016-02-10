@@ -6,18 +6,10 @@ void keyPressed(){
       {
         state=stateGame;
       }
-      /*if(key=='2')
-      {
-        state=stateGame;
-      }
-      if(key=='3')
-      {
-        state=stateGame;
-      }*/
   }//close switch
   if(key=='r'||key=='R')
   {
-    reset();
+    bullets=10;
   }
   
   if(key=='m'||key=='M')

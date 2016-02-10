@@ -31,7 +31,26 @@ void background(){
   fill(0);//Fill boxes in black
   stroke(255);//Outline boxes in white
   rect(100,535,190,110);//Draw Left score box
+  fill(200);
+  textSize(15);
+  text("Your score is: " +score, 70,500);//Displays Score of current Game
+  
+  fill(0);
+  stroke(255);
   rect(900,535,190,110);//Draw Right score box
+  fill(200);
+  textSize(15);
+  text("Highscores", 900,500);
+  fill(200);
+  textSize(15);
+  text("1:", 820,515);
+  fill(200);
+  textSize(15);
+  text("2:", 820,530);
+  fill(200);
+  textSize(15);
+  text("3:",+ 820,545);
+  
   
   stroke(0);
   strokeWeight(1);

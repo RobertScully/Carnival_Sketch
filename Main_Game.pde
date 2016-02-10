@@ -3,8 +3,6 @@ background(204,0,0);
 background();  
 
 if(frameCount==600){
-      
-  
     reset();
     state=stateMenu;
 }
@@ -20,6 +18,7 @@ if(frameCount==600){
         }
       }
       
+     
       
  //Draws targets and check if they have been hit. If hit adds to score
  for(int i = 0 ; i < targets.size() ; i++) {
@@ -58,8 +57,7 @@ if(frameCount==600){
    for(int i=0;i<int(bullets);i++){
      rect(775,595-i*10,10,5);
    }
-   textSize(15);
-   text("Your score is: " +score, 70,500);//Displays Score of current Game
+   
    
   
    

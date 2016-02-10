@@ -4,8 +4,10 @@ background();
 
     if(millis() - t.start_time >= t.interval){
       for (int i=0 ; i < 1 ; i++) {
-        randomspawn();
+         randomspawn();
+         smallrandomspawn();
          targets.add(new Target(z , 335));
+         stargets.add(new smallerTarget(q,205));
         }
       }
 
@@ -34,6 +36,14 @@ if(bullets>=1 && mousePressed && mouseButton == LEFT) {
      targets.get(i).display();
    }
  }
+ 
+ for(int i = 0 ; i < stargets.size() ; i++) {
+   if(!stargets.get(i).hit){
+     stargets.get(i).smallcheckHit(shooting, mouseX, mouseY);
+     stargets.get(i).smalldisplay();
+   }
+ }
+ 
  
    //Displays crosshair in place of a cursor. If mouse button is pressed turns crosshair red.
    noFill();

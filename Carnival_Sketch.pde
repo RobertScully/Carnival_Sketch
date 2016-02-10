@@ -7,10 +7,12 @@ float bullets;
 int score=0;
 int scores=0;
 int z;
+int q;
 
 
 //initializes target array
 ArrayList<Target> targets = new ArrayList<Target>();
+ArrayList<smallerTarget> stargets =new ArrayList<smallerTarget>();
 
 Player gun;
 Timer t;
@@ -50,4 +52,5 @@ void reset(){
   score=0;
   bullets=10;
   targets.clear();
+  stargets.clear();
 }

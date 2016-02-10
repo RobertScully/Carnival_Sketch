@@ -1,6 +1,6 @@
   class Timer {
   String time = "000";
-  int interval = 1000;//Sets interval to 1000 = 1 seconds
+  int interval = 1000;//Sets interval to 1000 = 3 seconds
   int font_size;
   int start_time;
   
@@ -10,7 +10,7 @@
   
   void time(){
       if (millis() - start_time >= interval) {//Uses millis function - time since program started and compares to the interval which is set to 1000 to determine seconds
-        time = nf(int(time) + 1, 3); //Utility function to format time number into a string for an easily printable timer
+        time = nf(int(time) + 1,3); //Utility function to format time number into a string for an easily printable timer
         start_time = millis();//Sets start time = to millis
     }
   }

@@ -5,7 +5,7 @@ int state = stateMenu;
 boolean shooting,hit;
 float bullets;
 int score=0;
-int scores=0;
+
 int z;
 int q;
 
@@ -14,21 +14,14 @@ int q;
 ArrayList<Target> targets = new ArrayList<Target>();
 ArrayList<smallerTarget> stargets =new ArrayList<smallerTarget>();
 
-Player gun;
 Timer t;
 
 void setup(){
   size(1000,600);  
   background(0);
   
-  score=0;
-  scores=0;
-  z=0;
   bullets=10;
   
-  
-  
-  gun = new Player();
   t = new Timer();
 }//End Setup
 

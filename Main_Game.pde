@@ -1,12 +1,12 @@
 void drawForStateGame(){
 background(204,0,0);
 background();  
-
-    if(millis() - t.start_time >= t.interval){
+  //Spawns a new small target and target every second in a random location
+    if(millis() - t.start_time >= t.interval  ){
       for (int i=0 ; i < 1 ; i++) {
          randomspawn();
          smallrandomspawn();
-         targets.add(new Target(z , 335));
+         targets.add(new Target(z,335));
          stargets.add(new smallerTarget(q,205));
         }
       }
@@ -64,7 +64,7 @@ if(bullets>=1 && mousePressed && mouseButton == LEFT) {
      rect(770,585-i*10,10,5);
    }
    
-   text("Your score is: " +score, 100,580);//Displays Score of current Game
+   text("Your score is: " +score, 90,510);//Displays Score of current Game
    
   
    

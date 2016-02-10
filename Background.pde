@@ -46,7 +46,7 @@ void background(){
   text("1:"+topscore1, 830,515);
   fill(200);
   textSize(15);
-  text("2:"+topscore3, 830,530);
+  text("2:"+topscore2, 830,530);
   fill(200);
   textSize(15);
   text("3:"+topscore3, 830,545);

@@ -1,6 +1,7 @@
 void drawForStateGame(){
 background(204,0,0);
 background();  
+
   //Spawns a new small target and target every second in a random location
     if(millis() - t.start_time >= t.interval  ){
       for (int i=0 ; i < 1 ; i++) {
@@ -11,23 +12,8 @@ background();
         }
       }
 
-//Controls shooting. If bullets is greater then 1 fires and decrements bullets
-if(bullets>=1 && mousePressed && mouseButton == LEFT) {
-    shooting = true; 
-    bullets-=0.2;
-    if(bullets<0) bullets=0;
-  }
+
   
-  //If player right clicks reloads gun by changing bullets var to 10.
-  else if(mousePressed && mouseButton == RIGHT) {
-  shooting=false;
-  bullets=10;
-  }
-  //If player isnt pressing left click sets shooting to false
-  else
- {
-   shooting=false;
- }
  
  //Draws targets and check if they have been hit. If hit adds to score  
  for(int i = 0 ; i < targets.size() ; i++) {
@@ -71,6 +57,4 @@ if(bullets>=1 && mousePressed && mouseButton == LEFT) {
   t.time();
   t.display();
   
-
-
 }//End Draw

@@ -2,18 +2,19 @@ final int stateMenu = 0;
 final int stateGame = 1;
 int state = stateMenu;
 
-boolean shooting,hit;
-float bullets;
+boolean shooting=false;
+boolean hit=false;
+int bullets;
 int score=0;
 
-int z;
-int q;
+int q,z;
 
 
-//initializes target array
+//Initializes Target Arrays
 ArrayList<Target> targets = new ArrayList<Target>();
 ArrayList<smallerTarget> stargets =new ArrayList<smallerTarget>();
 
+//Initializes timer
 Timer t;
 
 void setup(){

@@ -63,6 +63,6 @@ void background(){
   textSize(22);
   fill(0);
   textAlign(CENTER);
-  text("Carnival Shoot'em",width/2,550);
+  text("Carnival Shoot'em",width/2,510);
   
 }

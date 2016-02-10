@@ -2,15 +2,24 @@ void drawForStateGame(){
 background(204,0,0);
 background();  
 
+if(frameCount==600){
+      
+  
+    reset();
+    state=stateMenu;
+}
+
+
   //Spawns a new small target and target every second in a random location
     if(millis() - t.start_time >= t.interval  ){
       for (int i=0 ; i < 1 ; i++) {
-         randomspawn();
+         randomspawn();//Sets spawn randomly every second
          smallrandomspawn();
-         targets.add(new Target(z,335));
+         targets.add(new Target(z,335));//Adds target every second
          stargets.add(new smallerTarget(q,205));
         }
       }
+      
       
  //Draws targets and check if they have been hit. If hit adds to score
  for(int i = 0 ; i < targets.size() ; i++) {

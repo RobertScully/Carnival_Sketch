@@ -3,7 +3,6 @@
   int interval = 1000;//Sets interval to 1000 = 1 second
   int font_size;
   int start_time;
-  boolean dead=false;
   
   //Constructor
   Timer() {
@@ -22,6 +21,6 @@
     fill(22,22,222);//Sets Timer colour to Blue
     textAlign(CENTER);
     textSize(22);
-    text(time, 230 , 550 );//Displays timer
+    text(time, 230 , 510 );//Displays timer
   }//End display
 }

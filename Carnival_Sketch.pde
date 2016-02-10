@@ -4,11 +4,11 @@ int state = stateMenu;
 
 boolean shooting=false;
 boolean hit=false;
-//boolean sc1,sc2,sc3,sc4,sc5,sc6,sc7,sc8,sc9,sc10,sc11,sc12,sc13=false;
 int bullets;
 int score=0;
-
 int q,z;
+
+
 
 
 //Initializes Target Arrays
@@ -21,10 +21,11 @@ Timer t;
 void setup(){
   size(1000,600);  
   background(0);
+  frameRate=60;
   
   bullets=10;
   
-  t = new Timer();
+  t = new Timer(); 
 }//End Setup
 
 void draw(){//Start Draw
@@ -44,6 +45,7 @@ void draw(){//Start Draw
 
 void reset(){
   t.time="000";
+  frameCount=0;
   score=0;
   bullets=10;
   targets.clear();
